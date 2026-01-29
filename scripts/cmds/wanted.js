@@ -104,7 +104,7 @@ module.exports = {
 
       ctx.font = "italic 24px Arial";
       ctx.fillStyle = "#7f8c8d";
-      ctx.fillText("Author: MOHAMMAD AKASH", 350, 890);
+      ctx.fillText("Author: CHRISTUS", 350, 890);
 
       fs.writeFileSync(outputPath, canvas.toBuffer("image/jpeg"));
 
