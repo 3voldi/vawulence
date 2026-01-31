@@ -14,11 +14,11 @@ module.exports = {
     const { threadID, logMessageData, author } = event;
     const leftID = logMessageData.leftParticipantFbId;
 
-    // যদি কেউ নিজের ইচ্ছায় লিভ নেয় (kick না)
+    // Si quelqu'un part de lui-même (pas une expulsion/kick)
     if (leftID === author) {
       const userName = await usersData.getName(leftID);
 
-      // Messenger-friendly bold font map
+      // Map pour mettre le nom en gras (Messenger-friendly)
       const boldMap = {
         A: "𝗔", B: "𝗕", C: "𝗖", D: "𝗗", E: "𝗘", F: "𝗙", G: "𝗚", H: "𝗛", I: "𝗜", J: "𝗝",
         K: "𝗞", L: "𝗟", M: "𝗠", N: "𝗡", O: "𝗢", P: "𝗣", Q: "𝗤", R: "𝗥", S: "𝗦", T: "𝗧",
@@ -31,15 +31,15 @@ module.exports = {
       const boldName = userName.split("").map(c => boldMap[c] || c).join("");
 
       const form = {
-        body: `🛑 এই বলদ....!! 😹  
+        body: `🛑 Oh l'idiot... !! 😹  
 ${boldName}  
-💬 গ্রুপ থেকে লিভ নেওয়া কি মুখের কথা নাকি? 😏  
-👑 যে গ্রুপে আমি থাকি..?? 🐸  
-⚠️ সেই গ্রুপ থেকে লিভ নেওয়া অসম্ভব ভাই! 😂  
-🌀 আবার অ্যাড করে দিলাম 😇  
+💬 Tu croyais vraiment que quitter le groupe était aussi simple ? 😏  
+👑 Dans un groupe où JE suis présent..?? 🐸  
+⚠️ C'est impossible de s'échapper d'ici, mon frère ! 😂  
+🌀 Allez, je t'ai réajouté d'office 😇  
 
 ━━━━━━━━━━━━━━━
-👑 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : 𝗔𝗸𝗮𝘀𝗵 💎
+👑 𝗣𝗿𝗼𝗽𝗿𝗶𝗼 𝗱𝘂 𝗕𝗼𝘁 : Christus 💎
 ━━━━━━━━━━━━━━━`
       };
 
@@ -47,7 +47,7 @@ ${boldName}
         await api.addUserToGroup(leftID, threadID);
         await message.send(form);
       } catch (err) {
-        message.send("⚠️ দুঃখিত, আমি ইউজারটাকে আবার অ্যাড করতে পারিনি। সম্ভবত অ্যাড ব্লক করা আছে।");
+        message.send("⚠️ Désolé, je n'ai pas pu réajouter l'utilisateur. Ses paramètres de confidentialité bloquent peut-être l'ajout.");
       }
     }
   }
