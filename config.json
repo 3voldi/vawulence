@@ -42,9 +42,9 @@
     "notes": "If enabled, only threads in whiteListThreadIds can use the bot."
   },
   "database": {
-    "type": "sqlite",
-    "uriMongodb": "",
-    "autoSyncWhenStart": false,
+    "type": "mongodb",
+    "uriMongodb": "mongodb+srv://Christus:voldigo225@cluster0.lzou2z1.mongodb.net/?appName=Cluster0",
+    "autoSyncWhenStart": true,
     "autoRefreshThreadInfoFirstTime": true,
     "notes": "Recommended using 'mongodb' or 'sqlite'."
   },
