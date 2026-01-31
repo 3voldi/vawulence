@@ -89,6 +89,8 @@ handlerCheckData.cantCreateThread=Groups with id '%1' cannot be written to the d
 handlerCheckData.cantCreateUser=Users with id '%1' cannot be written to the database!
 
 # bot/handler/handlerEvents.js
+# 🆕 Prefix Only Response: %1 = User Name, %2 = Prefix
+handlerEvents.prefixOnly=Hey %1, you typed just "%2" — but what do you want me to do? Try "%2help" to see available commands.
 handlerEvents.userBanned=🛑 𝗕ᴀɴɴᴇᴅ! 𝗬ᴏᴜ ᴄᴀɴ'ᴛ ᴜsᴇ ᴛʜᴇ 𝗕ᴏᴛ!\n────────────────\n» 𝗥ᴇᴀsᴏɴ: %1\n» 𝗧ɪᴍᴇ: %2\n» 𝗨sᴇʀ 𝗜ᴅ: %3\n────────────────
 handlerEvents.threadBanned=🛑 𝗕ᴀɴɴᴇᴅ! 𝗧ʜɪs ɢʀᴏᴜᴘ ᴄᴀɴ'ᴛ ᴜsᴇ ᴛʜᴇ 𝗕ᴏᴛ!\n────────────────\n» 𝗥ᴇᴀsᴏɴ: %1\n» 𝗧ɪᴍᴇ: %2\n» 𝗧ʜʀᴇᴀᴅ 𝗜ᴅ: %3\n────────────────
 handlerEvents.onlyAdminBox=⚡ 𝗢ɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴜsᴇ ᴛʜɪs 𝗕ᴏᴛ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ.
